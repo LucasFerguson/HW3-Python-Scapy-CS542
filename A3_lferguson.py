@@ -75,7 +75,7 @@ p11 = Ether(src="68:c7:b9:69:0e:a7", dst="00:57:3a:e9:03:a2")/IPv6(src="2001:aea
 p12 = Ether(src="00:57:3a:e9:03:a2", dst="68:c7:b9:69:0e:a7")/IPv6(src="2001:9d49:2b39:210f:790e:acc:3af:4b52", dst="2001:aea7:6bda:21f4:de29:d524:90db:2492")/TCP(sport=60061, dport=11345, seq=0, flags=0x002, window=8192, chksum=0xce48)/int("3966633334363831", 16).to_bytes(8, byteorder='big')
 
 
-p3.show()
+# p3.show()
 
 # create pcap file
 wrpcap("lferguson.pcap", [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12])
