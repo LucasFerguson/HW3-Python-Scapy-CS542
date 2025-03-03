@@ -78,4 +78,4 @@ p12 = Ether(src="00:57:3a:e9:03:a2", dst="68:c7:b9:69:0e:a7")/IPv6(src="2001:9d4
 p3.show()
 
 # create pcap file
-wrpcap("lferguson3.pcap", [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12])
+wrpcap("lferguson.pcap", [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12])
