@@ -1,10 +1,5 @@
 from scapy.all import *
 
-# send(IP(src="192.168.1.103", dst="192.168.1.1")/ICMP()/"Hello World")
-
-# send(IPv6(src="fe80::1017:f9ff:fef9:19a", dst="fe80::4d3:1aff:fe9e:1504")/ICMP()/"Hello World")
-# - This worked!!
-
 # Recreateing the packets from lferguson.pcap
 
 # Packet 1
@@ -34,9 +29,10 @@ from scapy.all import *
 	# Data (14 bytes)
 	# 	Data: 6165393862626261356332633234
 	# 	[Length: 14]
-
-
 p1 = Ether(src="68:c7:b9:69:0e:a7", dst="00:d6:f9:f4:99:78")/IPv6(src="2001:aea7:6bda:21f4:de29:d524:90db:2492", dst="2001:9d49:2b39:210f:1527:7693:9014:71fe")/UDP(sport=29780, dport=6217)/"6165393862626261356332633234"
+
+# sleep for 0.004353 seconds
+# time.sleep(0.004353)
 
 # Packet 2
 p2 = Ether(src="00:d6:f9:f4:99:78", dst="68:c7:b9:69:0e:a7")/IPv6(src="2001:9d49:2b39:210f:1527:7693:9014:71fe", dst="2001:aea7:6bda:21f4:de29:d524:90db:2492")/UDP(sport=27192, dport=32489)/"32383031333932383938636239633631373462"

@@ -1,3 +1,6 @@
+
+# Just a repository for my Python scripts for CS542 Computer Networks I
+
 Create Python Venv on Windows
 ```
 py -m venv venv
